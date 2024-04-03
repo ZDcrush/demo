@@ -28,9 +28,17 @@
 `git tag`
 # 切换到该标签的代码状态
 `git checkout tag_name`
-# 表示我们指定 RSA 算法生成密钥，然后敲三次回车键，期间不需要输入密码，之后就就会生成两个文件，分别为id_rsa和id_rsa.pub，即密钥id_rsa和公钥id_rsa.pub. 对于这两个文件，其都为隐藏文件
+# 指定 RSA 算法生成密钥，敲三次回车键，期间不需要输入密码，之后就就会生成两个文件，分别为id_rsa和id_rsa.pub，即密钥id_rsa和公钥id_rsa.pub. 其都为隐藏文件
 ` ssh-keygen -t rsa`
 # 生成SSH key 连接GitHub
 `ssh-keygen -t rsa -C “your_email.com”`
 ` ssh -T git@github.com`
-
+# 连接本地仓库
+`git remote add origin ssh_地址`
+# 全局配置用户名和邮箱
+```
+git config --global user.email "you@example.com"  
+git config --global user.name "Your Name"
+```
+# 本地仓库内容push到远程仓库
+`git push origin master`
